@@ -1,0 +1,25 @@
+@use "../abstracts";
+.profile-user {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: abstracts.function_em(20);
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+  flex: 1;
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 16,
+      $font-weight: 500,
+      $line-height: 1.2,
+      $color: var(--global-grey)
+    );
+  }
+
+  &__link {
+    color: var(--primary-200);
+  }
+}

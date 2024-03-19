@@ -1,0 +1,44 @@
+@use '../abstracts';
+
+.card-user {
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: abstracts.function_em(15);
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+
+  &__description {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: abstracts.function_em(10);
+  }
+
+  &__name {
+    flex: 0 0 auto;
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 21,
+      $font-weight: 600,
+      $line-height: 1.2,
+    );
+  }
+
+  &__caption {
+    display: flex;
+    flex-flow: row wrap;
+    gap: abstracts.function_em(10);
+    @include abstracts.mixin_font(
+      $cl-ratio: 1.2,
+      $cl-px: 16,
+      $font-weight: 500,
+      $line-height: 1.2,
+      $color: var(--global-grey)
+    );
+  }
+};
